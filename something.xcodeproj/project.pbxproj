@@ -76,6 +76,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B77464C1FAF35B500F0E884 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B77464D1FAF35D000F0E884 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B77464E1FAF35DF00F0E884 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B77464F1FAF35E600F0E884 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		0B7A77A81FADE995005A9509 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +127,10 @@
 		0B7A77B31FADE996005A9509 /* something */ = {
 			isa = PBXGroup;
 			children = (
+				0B77464F1FAF35E600F0E884 /* Util */,
+				0B77464E1FAF35DF00F0E884 /* ViewModel */,
+				0B77464D1FAF35D000F0E884 /* View */,
+				0B77464C1FAF35B500F0E884 /* Model */,
 				0B7A77B41FADE996005A9509 /* AppDelegate.swift */,
 				0B7A77B61FADE996005A9509 /* FirstViewController.swift */,
 				0B7A77B81FADE996005A9509 /* SecondViewController.swift */,
@@ -509,6 +541,7 @@
 				0B7A77DD1FADE999005A9509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B7A77DE1FADE999005A9509 /* Build configuration list for PBXNativeTarget "somethingTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +550,7 @@
 				0B7A77E01FADE999005A9509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B7A77E11FADE999005A9509 /* Build configuration list for PBXNativeTarget "somethingUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +559,7 @@
 				0B7A77E31FADE999005A9509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
