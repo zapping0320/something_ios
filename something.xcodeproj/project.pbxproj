@@ -14,6 +14,7 @@
 		0B7746591FAF425800F0E884 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7746581FAF425800F0E884 /* AccountViewController.swift */; };
 		0B77465B1FB09E7C00F0E884 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77465A1FB09E7C00F0E884 /* NewNoteViewController.swift */; };
 		0B77465D1FB0A65300F0E884 /* NotebookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B77465C1FB0A65300F0E884 /* NotebookCell.swift */; };
+		0B7746611FB1DF7B00F0E884 /* Notebooks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B77465F1FB1DF7B00F0E884 /* Notebooks.xcdatamodeld */; };
 		0B7A77B51FADE996005A9509 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A77B41FADE996005A9509 /* AppDelegate.swift */; };
 		0B7A77BC1FADE997005A9509 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A77BA1FADE997005A9509 /* Main.storyboard */; };
 		0B7A77BE1FADE998005A9509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A77BD1FADE998005A9509 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		0B7746581FAF425800F0E884 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0B77465A1FB09E7C00F0E884 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		0B77465C1FB0A65300F0E884 /* NotebookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookCell.swift; sourceTree = "<group>"; };
+		0B7746601FB1DF7B00F0E884 /* Notebooks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notebooks.xcdatamodel; sourceTree = "<group>"; };
 		0B7A77B11FADE996005A9509 /* something.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = something.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7A77B41FADE996005A9509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B7A77BB1FADE997005A9509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		0B77464C1FAF35B500F0E884 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0B77465E1FB1DF3A00F0E884 /* DataModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +122,14 @@
 			children = (
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		0B77465E1FB1DF3A00F0E884 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B77465F1FB1DF7B00F0E884 /* Notebooks.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		0B7A77A81FADE995005A9509 = {
@@ -313,6 +324,7 @@
 				0B7746591FAF425800F0E884 /* AccountViewController.swift in Sources */,
 				0B77465B1FB09E7C00F0E884 /* NewNoteViewController.swift in Sources */,
 				0B7A77B51FADE996005A9509 /* AppDelegate.swift in Sources */,
+				0B7746611FB1DF7B00F0E884 /* Notebooks.xcdatamodeld in Sources */,
 				0B7746571FAF424600F0E884 /* FavoriteViewController.swift in Sources */,
 				0B7746551FAF423600F0E884 /* NoteViewController.swift in Sources */,
 				0B77465D1FB0A65300F0E884 /* NotebookCell.swift in Sources */,
@@ -582,6 +594,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B77465F1FB1DF7B00F0E884 /* Notebooks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B7746601FB1DF7B00F0E884 /* Notebooks.xcdatamodel */,
+			);
+			currentVersion = 0B7746601FB1DF7B00F0E884 /* Notebooks.xcdatamodel */;
+			path = Notebooks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B7A77A91FADE995005A9509 /* Project object */;
 }
