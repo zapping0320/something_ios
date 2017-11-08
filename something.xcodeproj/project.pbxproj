@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */; };
-		0B6958AD1FB1EDA30022D410 /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958A91FB1EDA30022D410 /* Notebook+CoreDataProperties.swift */; };
 		0B6958AE1FB1EDA30022D410 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958AA1FB1EDA30022D410 /* Note+CoreDataClass.swift */; };
 		0B6958AF1FB1EDA30022D410 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */; };
+		0B6958B11FB334310022D410 /* NotebookContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958B01FB334310022D410 /* NotebookContext.swift */; };
+		0B6958B31FB337CF0022D410 /* AddNotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958B21FB337CF0022D410 /* AddNotebookViewController.swift */; };
 		0B7746511FAF41E400F0E884 /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7746501FAF41E400F0E884 /* NotebookViewController.swift */; };
 		0B7746531FAF422000F0E884 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7746521FAF422000F0E884 /* SearchViewController.swift */; };
 		0B7746551FAF423600F0E884 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7746541FAF423600F0E884 /* NoteViewController.swift */; };
@@ -46,9 +47,10 @@
 
 /* Begin PBXFileReference section */
 		0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "something/Model/Entity/Notebook+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		0B6958A91FB1EDA30022D410 /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataProperties.swift"; path = "something/Model/Entity/Notebook+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0B6958AA1FB1EDA30022D410 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "something/Model/Entity/Note+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "something/Model/Entity/Note+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0B6958B01FB334310022D410 /* NotebookContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookContext.swift; sourceTree = "<group>"; };
+		0B6958B21FB337CF0022D410 /* AddNotebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotebookViewController.swift; sourceTree = "<group>"; };
 		0B7746501FAF41E400F0E884 /* NotebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
 		0B7746521FAF422000F0E884 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0B7746541FAF423600F0E884 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				0B7C8BC41FB1EACD00FD17DD /* Entity */,
 				0B77465E1FB1DF3A00F0E884 /* DataModel */,
+				0B6958B01FB334310022D410 /* NotebookContext.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +125,7 @@
 				0B7746561FAF424600F0E884 /* FavoriteViewController.swift */,
 				0B7746581FAF425800F0E884 /* AccountViewController.swift */,
 				0B77465A1FB09E7C00F0E884 /* NewNoteViewController.swift */,
+				0B6958B21FB337CF0022D410 /* AddNotebookViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -199,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */,
-				0B6958A91FB1EDA30022D410 /* Notebook+CoreDataProperties.swift */,
 				0B6958AA1FB1EDA30022D410 /* Note+CoreDataClass.swift */,
 				0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */,
 			);
@@ -343,17 +346,18 @@
 			files = (
 				0B7746531FAF422000F0E884 /* SearchViewController.swift in Sources */,
 				0B7746591FAF425800F0E884 /* AccountViewController.swift in Sources */,
-				0B6958AD1FB1EDA30022D410 /* Notebook+CoreDataProperties.swift in Sources */,
 				0B6958AF1FB1EDA30022D410 /* Note+CoreDataProperties.swift in Sources */,
 				0B77465B1FB09E7C00F0E884 /* NewNoteViewController.swift in Sources */,
 				0B7A77B51FADE996005A9509 /* AppDelegate.swift in Sources */,
 				0B7746611FB1DF7B00F0E884 /* Notebooks.xcdatamodeld in Sources */,
 				0B7746571FAF424600F0E884 /* FavoriteViewController.swift in Sources */,
+				0B6958B11FB334310022D410 /* NotebookContext.swift in Sources */,
 				0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */,
 				0B7746551FAF423600F0E884 /* NoteViewController.swift in Sources */,
 				0B6958AE1FB1EDA30022D410 /* Note+CoreDataClass.swift in Sources */,
 				0B77465D1FB0A65300F0E884 /* NotebookCell.swift in Sources */,
 				0B7746511FAF41E400F0E884 /* NotebookViewController.swift in Sources */,
+				0B6958B31FB337CF0022D410 /* AddNotebookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

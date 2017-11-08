@@ -35,15 +35,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-UY-PFm" userLabel="Button_addnotebook">
+                                <rect key="frame" x="10" y="70" width="355" height="30"/>
+                                <color key="backgroundColor" red="0.38654898030000001" green="0.75559884430000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jQB-Am-IQO"/>
+                                </constraints>
+                                <state key="normal" title="Add Notebook">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TeM-qE-QEX" kind="show" id="SYf-Kv-hW1"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGq-5A-nNd">
-                                <rect key="frame" x="0.0" y="80" width="375" height="538"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="notebook cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notebook cell" rowHeight="74" id="3m4-ud-Dtt" customClass="NotebookCell" customModule="something" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3m4-ud-Dtt" id="FfX-6V-ejF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKQ-0Q-kX5" userLabel="Label_notecount">
@@ -73,11 +86,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gGq-5A-nNd" secondAttribute="trailing" id="5I6-6O-qqR"/>
+                            <constraint firstAttribute="trailing" secondItem="gRc-UY-PFm" secondAttribute="trailing" constant="10" id="FJk-Iy-liI"/>
+                            <constraint firstItem="gRc-UY-PFm" firstAttribute="top" secondItem="gj4-iv-x3R" secondAttribute="bottom" id="Jm8-Jq-tKB"/>
                             <constraint firstAttribute="trailing" secondItem="gj4-iv-x3R" secondAttribute="trailing" constant="15" id="R9K-Iz-7oX"/>
+                            <constraint firstItem="gRc-UY-PFm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="10" id="UXs-WJ-pCC"/>
                             <constraint firstItem="gGq-5A-nNd" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="d7T-Gz-npY"/>
-                            <constraint firstItem="gGq-5A-nNd" firstAttribute="top" secondItem="gj4-iv-x3R" secondAttribute="bottom" constant="10" id="eyF-pl-uHu"/>
                             <constraint firstItem="gj4-iv-x3R" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="15" id="jNo-q8-jOH"/>
                             <constraint firstItem="gj4-iv-x3R" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="l7J-65-jGQ"/>
+                            <constraint firstItem="gGq-5A-nNd" firstAttribute="top" secondItem="gRc-UY-PFm" secondAttribute="bottom" constant="5" id="llQ-mY-eja"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="gGq-5A-nNd" secondAttribute="bottom" id="nQi-vt-Bdw"/>
                         </constraints>
                     </view>
@@ -90,6 +106,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="-1175.2623688155923"/>
+        </scene>
+        <!--AddNotebook View Controller-->
+        <scene sceneID="ByZ-Lb-TYw">
+            <objects>
+                <viewController id="TeM-qE-QEX" userLabel="AddNotebook View Controller" customClass="AddNotebookViewController" customModule="something" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WgV-di-g9D"/>
+                        <viewControllerLayoutGuide type="bottom" id="0P5-kz-D33"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NV4-ig-twN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHh-Fx-cuQ">
+                                <rect key="frame" x="279" y="30" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.54021114029999995" green="1" blue="0.64958068410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pK0-7p-zA6"/>
+                                    <constraint firstAttribute="width" constant="80" id="wOP-Ni-3iP"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_save_action:" destination="TeM-qE-QEX" eventType="touchUpInside" id="53M-IK-f0u"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert New Notebook Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bro-jr-4IN" userLabel="Label_guide">
+                                <rect key="frame" x="10" y="120" width="355" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="egT-4S-LAc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfy-Mq-k1v" userLabel="Name Text Field">
+                                <rect key="frame" x="10" y="170" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bro-jr-4IN" firstAttribute="top" secondItem="lHh-Fx-cuQ" secondAttribute="bottom" constant="10" id="3bd-Ll-iqG"/>
+                            <constraint firstAttribute="trailing" secondItem="cfy-Mq-k1v" secondAttribute="trailing" constant="10" id="9Ly-9z-55K"/>
+                            <constraint firstItem="cfy-Mq-k1v" firstAttribute="top" secondItem="bro-jr-4IN" secondAttribute="bottom" constant="20" id="DqA-Nl-A6L"/>
+                            <constraint firstAttribute="trailing" secondItem="lHh-Fx-cuQ" secondAttribute="trailing" constant="16" id="GEn-8f-noU"/>
+                            <constraint firstItem="bro-jr-4IN" firstAttribute="leading" secondItem="NV4-ig-twN" secondAttribute="leading" constant="10" id="JCj-3i-Mkm"/>
+                            <constraint firstItem="cfy-Mq-k1v" firstAttribute="leading" secondItem="NV4-ig-twN" secondAttribute="leading" constant="10" id="az8-4x-hRA"/>
+                            <constraint firstItem="lHh-Fx-cuQ" firstAttribute="top" secondItem="WgV-di-g9D" secondAttribute="bottom" constant="10" id="ugE-0T-AkL"/>
+                            <constraint firstAttribute="trailing" secondItem="bro-jr-4IN" secondAttribute="trailing" constant="10" id="wDU-ST-sfP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tf_name_outlet" destination="cfy-Mq-k1v" id="xmc-5G-Psz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XmO-ia-WUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517.5999999999999" y="-1709.5952023988007"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="Tg9-7X-PPV">
@@ -107,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1N-OD-6sC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="-1185"/>
+            <point key="canvasLocation" x="1519" y="-993"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
