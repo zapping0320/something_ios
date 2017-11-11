@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class NotebookViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -24,7 +25,26 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
         //self.notebooktableview.reloadData()
         self.notebooktableview.register(UITableViewCell.self, forCellReuseIdentifier: "notebook cell")
         
+        loadNotebooks()
+    }
+    
+    func loadNotebooks() {
+        let fetchRequest: NSFetchRequest<Notebook> = Notebook.fetchRequest()
+        do {
+            // 결과값 담기
+            let searchResults = try CoreDataManager.shared.getContext().fetch(fetchRequest)
+            // for 문을 이용하여 Key 값에 대한 Value 값 가져오기
+            for notebook in searchResults as [NSManagedObject] {
+                print("\(notebook.value(forKey: "name"))")
+                
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
         
+        
+        
+        notebooktableview.reloadData()
     }
 }
 
