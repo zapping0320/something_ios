@@ -20,7 +20,26 @@ public class Notebook: NSManagedObject {
     @NSManaged public var deleted_at: NSDate?
     @NSManaged public var isFavorite: Bool
     @NSManaged public var name: String?
-    @NSManaged public var updated_at: NSDate?
+    @NSManaged public var updated_at: NSDate
+    
+    
+}
+
+public class NotebookItem: NSObject {
+    public var created_at: Date
+    public var deleted_at: Date?
+    public var isFavorite:Bool
+    public var notebookname:String
+    public var updated_at: Date
+    
+    override init() {
+        self.isFavorite = false
+        self.created_at = Date()
+        self.updated_at = self.created_at
+        self.deleted_at = nil
+        self.notebookname = ""
+        super.init()
+    }
 }
 
 

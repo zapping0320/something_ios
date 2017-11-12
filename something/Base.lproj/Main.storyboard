@@ -56,7 +56,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3m4-ud-Dtt" id="FfX-6V-ejF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKQ-0Q-kX5" userLabel="Label_notecount">
@@ -76,8 +76,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="label_name" destination="FfT-ed-0DD" id="geo-Eo-XpD"/>
-                                            <outlet property="label_subtitle" destination="MKQ-0Q-kX5" id="Rse-Kk-Erq"/>
+                                            <outlet property="label_name" destination="FfT-ed-0DD" id="tcX-bv-SAg"/>
+                                            <outlet property="label_subtitle" destination="MKQ-0Q-kX5" id="Jld-99-pvG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -53,7 +53,8 @@ class AddNotebookViewController : UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
- 
+        
+        self.dismiss(animated: false, completion: nil)
     }
     
 }
