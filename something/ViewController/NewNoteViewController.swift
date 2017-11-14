@@ -11,4 +11,8 @@ import UIKit
 
 class NewNoteViewController : UIViewController {
     
+    @IBAction func btn_action_save(_ sender: UIButton) {
+    }
+    @IBOutlet weak var tf_ol_title: UITextField!
+    @IBOutlet weak var tv_ol_content: UITextView!
 }

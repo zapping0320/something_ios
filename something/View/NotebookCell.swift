@@ -6,11 +6,16 @@
 //  Copyright © 2017년 John Kim. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class NotebookCell : UITableViewCell {
     
     @IBOutlet weak var label_name: UILabel!
     @IBOutlet weak var label_subtitle: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        self.label_name.text = "gggg"
+    }
 }

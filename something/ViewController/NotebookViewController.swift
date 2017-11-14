@@ -19,11 +19,11 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        self.notebooktableview.register(NotebookCell.self, forCellReuseIdentifier: "notebook cell")
         self.notebooktableview.delegate = self
         self.notebooktableview.dataSource = self
         //self.notebooktableview.reloadData()
-        self.notebooktableview.register(NotebookCell, forCellReuseIdentifier: "notebook cell")
+        
         
         loadNotebooks()
     }
@@ -50,17 +50,20 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
 }
 
 extension NotebookViewController {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notebookarray.count;
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell:NotebookCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
+        let cell:NotebookCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell") as! NotebookCell//(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
         let currentitem = notebookarray[indexPath.row]
         print(indexPath.row)
         print(currentitem.notebookname)
-        cell.label_name.text = ""
-        //cell.label_name.text = currentitem.notebookname
+        cell.label_name?.text = currentitem.notebookname
         
         
         return cell

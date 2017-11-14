@@ -11,4 +11,6 @@ import UIKit
 
 class NoteViewController : UIViewController {
     
+    @IBOutlet weak var tf_ol_title: UITextField!
+    @IBOutlet weak var tv_ol_content: UITextView!
 }
