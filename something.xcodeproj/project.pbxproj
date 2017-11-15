@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */; };
-		0B6958AE1FB1EDA30022D410 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958AA1FB1EDA30022D410 /* Note+CoreDataClass.swift */; };
 		0B6958AF1FB1EDA30022D410 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */; };
 		0B6958B11FB334310022D410 /* NotebookContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958B01FB334310022D410 /* NotebookContext.swift */; };
 		0B6958B31FB337CF0022D410 /* AddNotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958B21FB337CF0022D410 /* AddNotebookViewController.swift */; };
@@ -48,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "something/Model/Entity/Notebook+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		0B6958AA1FB1EDA30022D410 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "something/Model/Entity/Note+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "something/Model/Entity/Note+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0B6958B01FB334310022D410 /* NotebookContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookContext.swift; sourceTree = "<group>"; };
 		0B6958B21FB337CF0022D410 /* AddNotebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotebookViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */,
-				0B6958AA1FB1EDA30022D410 /* Note+CoreDataClass.swift */,
 				0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */,
 			);
 			name = Entity;
@@ -358,7 +355,6 @@
 				0B6958B11FB334310022D410 /* NotebookContext.swift in Sources */,
 				0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */,
 				0B7746551FAF423600F0E884 /* NoteViewController.swift in Sources */,
-				0B6958AE1FB1EDA30022D410 /* Note+CoreDataClass.swift in Sources */,
 				0B77465D1FB0A65300F0E884 /* NotebookCell.swift in Sources */,
 				0B7746511FAF41E400F0E884 /* NotebookViewController.swift in Sources */,
 				0B6958B31FB337CF0022D410 /* AddNotebookViewController.swift in Sources */,

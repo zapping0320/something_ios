@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 
 
-extension Note {
+class Note: NSManagedObject  {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Note> {
         return NSFetchRequest<Note>(entityName: "Note")
@@ -26,3 +26,23 @@ extension Note {
     @NSManaged public var relationship: Notebook?
 
 }
+
+public class NoteItem: NSObject {
+    public var created_at: Date
+    public var deleted_at: Date?
+    public var isFavorite:Bool
+    public var title:String
+    public var updated_at: Date
+    public var content:String
+    
+    override init() {
+        self.isFavorite = false
+        self.created_at = Date()
+        self.updated_at = self.created_at
+        self.deleted_at = nil
+        self.title = ""
+        self.content = ""
+        super.init()
+    }
+}
+

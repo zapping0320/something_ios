@@ -98,7 +98,7 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="gGq-5A-nNd" secondAttribute="bottom" id="nQi-vt-Bdw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Notebook" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="btn_search" destination="gj4-iv-x3R" id="RJC-Ef-lZ8"/>
                         <outlet property="notebooktableview" destination="gGq-5A-nNd" id="whC-Qv-8lS"/>
@@ -209,7 +209,7 @@
             </objects>
             <point key="canvasLocation" x="1517.5999999999999" y="-993.55322338830592"/>
         </scene>
-        <!--Second-->
+        <!--Search-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SearchViewController" customModule="something" customModuleProvider="target" sceneMemberID="viewController">
@@ -251,7 +251,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="W69-kX-q20" id="ymn-VD-64x"/>
                     </connections>
@@ -327,7 +327,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X33-Qi-G9L">
                                 <rect key="frame" x="10" y="155" width="355" height="453"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -345,7 +344,7 @@
                             <constraint firstAttribute="trailing" secondItem="X33-Qi-G9L" secondAttribute="trailing" constant="10" id="xMq-pT-gUK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Bym-Lz-muA"/>
+                    <tabBarItem key="tabBarItem" title="+" id="Bym-Lz-muA" userLabel="+"/>
                     <connections>
                         <outlet property="tf_ol_title" destination="0H1-8v-JaU" id="aGA-dy-TU3"/>
                         <outlet property="tv_ol_content" destination="X33-Qi-G9L" id="Yzg-h6-0kt"/>
@@ -368,7 +367,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97114376619999998" green="1" blue="0.35419938849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pWS-3E-sGI"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="pWS-3E-sGI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t86-pN-2w9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,7 +386,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.38343998930000001" green="1" blue="0.40487929480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4Od-tk-3kp"/>
+                    <tabBarItem key="tabBarItem" title="favorite" id="4Od-tk-3kp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPM-cg-4Yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

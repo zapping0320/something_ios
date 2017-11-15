@@ -36,7 +36,8 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
             let searchResults = try CoreDataManager.shared.getContext().fetch(fetchRequest)
             // for 문을 이용하여 Key 값에 대한 Value 값 가져오기
             for notebook in searchResults as [NSManagedObject] {
-                print("\(notebook.value(forKey: "name"))")
+                let value = String(describing: notebook.value(forKey: "name"))
+                print("\(value)")
                 let newitem = NotebookItem()
                 newitem.notebookname = notebook.value(forKey: "name") as! String
                 notebookarray.append(newitem)
