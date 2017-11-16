@@ -19,7 +19,7 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.notebooktableview.register(NotebookCell.self, forCellReuseIdentifier: "notebook cell")
+        self.notebooktableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook cell")
         self.notebooktableview.delegate = self
         self.notebooktableview.dataSource = self
         //self.notebooktableview.reloadData()
@@ -46,7 +46,7 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
             print("Error with request: \(error)")
         }
         
-        notebooktableview.reloadData()
+        self.notebooktableview.reloadData()
     }
 }
 
@@ -60,11 +60,11 @@ extension NotebookViewController {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell:NotebookCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell") as! NotebookCell//(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
+        let cell:NotebookTableViewCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell//self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell") as! NotebookTableViewCell//(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
         let currentitem = notebookarray[indexPath.row]
         print(indexPath.row)
         print(currentitem.notebookname)
-        cell.label_name?.text = currentitem.notebookname
+        cell.label_ol_name?.text = currentitem.notebookname
         
         
         return cell
