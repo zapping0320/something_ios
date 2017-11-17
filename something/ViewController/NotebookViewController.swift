@@ -59,6 +59,34 @@ extension NotebookViewController {
         return notebookarray.count;
     }
     
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30.0
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        /*
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Connect BLE View") as! ConnectBLEViewController
+        let itemlist = self.deviceinfolist_all[indexPath.section]
+        viewController.selecteditem = itemlist![indexPath.row]
+        viewController.selectedindex = indexPath.row
+        self.navigationController?.pushViewController(viewController, animated: true)
+ */
+    }
+    
+    /*
+    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
+        print("setiocn :\(indexPath.section) row:\(indexPath.row)")
+        return 100.0
+    }*/
+    //public ufnc tableView(_ tableView: UITableView, di)
+    
+    //public func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        /*
+     
+ */
+    //}
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell:NotebookTableViewCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell//self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell") as! NotebookTableViewCell//(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
         let currentitem = notebookarray[indexPath.row]
