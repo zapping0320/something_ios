@@ -10,6 +10,9 @@ import UIKit
 
 class NotebookContentViewController: UIViewController {
 
+    @IBOutlet weak var tableview: UITableView!
+    open var selectedindex:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

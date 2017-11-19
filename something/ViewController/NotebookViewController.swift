@@ -52,7 +52,7 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
 
 extension NotebookViewController {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,27 +65,14 @@ extension NotebookViewController {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        /*
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Connect BLE View") as! ConnectBLEViewController
-        let itemlist = self.deviceinfolist_all[indexPath.section]
-        viewController.selecteditem = itemlist![indexPath.row]
+        
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "NotebookContent View") as! NotebookContentViewController
+        //let itemlist = self.deviceinfolist_all[indexPath.section]
+        //viewController.selecteditem = itemlist![indexPath.row]
         viewController.selectedindex = indexPath.row
         self.navigationController?.pushViewController(viewController, animated: true)
- */
+ 
     }
-    
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        print("setiocn :\(indexPath.section) row:\(indexPath.row)")
-        return 100.0
-    }*/
-    //public ufnc tableView(_ tableView: UITableView, di)
-    
-    //public func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
-        /*
-     
- */
-    //}
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell:NotebookTableViewCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell//self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell") as! NotebookTableViewCell//(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
@@ -96,5 +83,18 @@ extension NotebookViewController {
         
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notebook header")!
+        
+        var title:String = "All Notebooks"
+        if section == 0 {
+            title = "Recent Notebooks"
+        }
+        let titleLabel = cell.viewWithTag(10) as! UILabel
+        titleLabel.text = title
+        
+        return cell.contentView
     }
 }
