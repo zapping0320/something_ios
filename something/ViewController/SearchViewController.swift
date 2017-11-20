@@ -54,16 +54,17 @@ class SearchViewController : UIViewController, UITableViewDelegate, UITableViewD
 
 extension SearchViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return searchednotesarray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:NotebookTableViewCell = self.tableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell//self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell") as! NotebookTableViewCell//(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
+        let cell:SearchedNoteTableViewCell = self.tableview.dequeueReusableCell(withIdentifier: "searchednote cell", for: indexPath) as! SearchedNoteTableViewCell
         if searchednotesarray.count > indexPath.row {
             let currentitem = searchednotesarray[indexPath.row]
             print(indexPath.row)
             print(currentitem.title)
-            cell.label_ol_name?.text = currentitem.title
+            cell.label_ol_title?.text = currentitem.title
+            cell.label_ol_content?.text = currentitem.content
         }
         
         return cell

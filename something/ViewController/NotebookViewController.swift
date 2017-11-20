@@ -23,7 +23,9 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
         self.notebooktableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook cell")
         self.notebooktableview.delegate = self
         self.notebooktableview.dataSource = self
-        
+    }
+    
+    override func  viewDidAppear(_ animated: Bool) {
         loadNotebooks()
     }
     
@@ -74,7 +76,7 @@ extension NotebookViewController {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell:NotebookTableViewCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell//self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell") as! NotebookTableViewCell//(withIdentifier: "notebook cell", for: indexPath) as! NotebookCell
+        let cell:NotebookTableViewCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell
         let currentitem = notebookarray[indexPath.row]
         print(indexPath.row)
         print(currentitem.notebookname)

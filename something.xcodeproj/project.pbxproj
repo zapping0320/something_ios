@@ -12,6 +12,7 @@
 		0B3F490F1FBDCDF900D3FA37 /* NotebookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F490D1FBDCDF900D3FA37 /* NotebookTableViewCell.swift */; };
 		0B3F49101FBDCDF900D3FA37 /* NotebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3F490E1FBDCDF900D3FA37 /* NotebookTableViewCell.xib */; };
 		0B3F49121FBF109B00D3FA37 /* NotebookContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F49111FBF109B00D3FA37 /* NotebookContentViewController.swift */; };
+		0B3F49141FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F49131FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift */; };
 		0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */; };
 		0B6958AF1FB1EDA30022D410 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */; };
 		0B6958B11FB334310022D410 /* NotebookContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6958B01FB334310022D410 /* NotebookContext.swift */; };
@@ -55,6 +56,7 @@
 		0B3F490D1FBDCDF900D3FA37 /* NotebookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookTableViewCell.swift; sourceTree = "<group>"; };
 		0B3F490E1FBDCDF900D3FA37 /* NotebookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookTableViewCell.xib; sourceTree = "<group>"; };
 		0B3F49111FBF109B00D3FA37 /* NotebookContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookContentViewController.swift; sourceTree = "<group>"; };
+		0B3F49131FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedNoteTableViewCell.swift; sourceTree = "<group>"; };
 		0B6958A81FB1EDA30022D410 /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "something/Model/Entity/Notebook+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0B6958AB1FB1EDA30022D410 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "something/Model/Entity/Note+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0B6958B01FB334310022D410 /* NotebookContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookContext.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				0B3F490A1FBDCD8900D3FA37 /* NoteTableViewCell.xib */,
 				0B3F490D1FBDCDF900D3FA37 /* NotebookTableViewCell.swift */,
 				0B3F490E1FBDCDF900D3FA37 /* NotebookTableViewCell.xib */,
+				0B3F49131FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				0B7746571FAF424600F0E884 /* FavoriteViewController.swift in Sources */,
 				0B3F490B1FBDCD8900D3FA37 /* NoteTableViewCell.swift in Sources */,
 				0B6958B11FB334310022D410 /* NotebookContext.swift in Sources */,
+				0B3F49141FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift in Sources */,
 				0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */,
 				0B7746551FAF423600F0E884 /* NoteViewController.swift in Sources */,
 				0B7746511FAF41E400F0E884 /* NotebookViewController.swift in Sources */,
