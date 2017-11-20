@@ -54,6 +54,7 @@ class NewNoteViewController : UIViewController {
         }
         
         
-        self.dismiss(animated: false, completion: nil)
+        //self.dismiss(animated: false, completion: nil)
+        self.tabBarController?.selectedIndex = 0
     }
 }

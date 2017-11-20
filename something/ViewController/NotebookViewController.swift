@@ -19,11 +19,10 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         self.notebooktableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook cell")
         self.notebooktableview.delegate = self
         self.notebooktableview.dataSource = self
-        //self.notebooktableview.reloadData()
-        
         
         loadNotebooks()
     }
