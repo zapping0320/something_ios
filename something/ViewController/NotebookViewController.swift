@@ -13,20 +13,21 @@ import CoreData
 class NotebookViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var btn_search: UITextField!
-    @IBOutlet weak var notebooktableview: UITableView!
+    @IBOutlet weak var tableview: UITableView!
     
     fileprivate var notebookarray:[NotebookItem] = [NotebookItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        self.notebooktableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook cell")
-        self.notebooktableview.delegate = self
-        self.notebooktableview.dataSource = self
+        self.tableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook cell")
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
+        loadNotebooks()
     }
     
     override func  viewDidAppear(_ animated: Bool) {
-        loadNotebooks()
+        //loadNotebooks()
     }
     
     func loadNotebooks() {
@@ -47,7 +48,7 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
             print("Error with request: \(error)")
         }
         
-        self.notebooktableview.reloadData()
+        self.tableview.reloadData()
     }
 }
 
@@ -76,12 +77,12 @@ extension NotebookViewController {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell:NotebookTableViewCell = self.notebooktableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell
-        let currentitem = notebookarray[indexPath.row]
-        print(indexPath.row)
-        print(currentitem.notebookname)
-        cell.label_ol_name?.text = currentitem.notebookname
         
+        let cell:NotebookTableViewCell = self.tableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell
+        let currentitem = notebookarray[indexPath.row]
+        //print(indexPath.row)
+        //print(currentitem.notebookname)
+        cell.label_ol_name?.text = currentitem.notebookname
         
         return cell
     }

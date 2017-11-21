@@ -85,7 +85,7 @@
                     <tabBarItem key="tabBarItem" title="Notebook" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="btn_search" destination="gj4-iv-x3R" id="RJC-Ef-lZ8"/>
-                        <outlet property="notebooktableview" destination="gGq-5A-nNd" id="whC-Qv-8lS"/>
+                        <outlet property="tableview" destination="gGq-5A-nNd" id="xTn-g2-QQg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
