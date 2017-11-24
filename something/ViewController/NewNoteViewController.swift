@@ -9,10 +9,9 @@
 import Foundation
 import UIKit
 import CoreData
+import RealmSwift
 
 class NewNoteViewController : UIViewController {
-    
-    
     @IBOutlet weak var tf_ol_title: UITextField!
     @IBOutlet weak var tv_ol_content: UITextView!
     
@@ -31,6 +30,23 @@ class NewNoteViewController : UIViewController {
             return
         }
         
+        let newnote = R_Note()
+        newnote.title = self.tf_ol_title.text!
+        newnote.content = self.tv_ol_content.text!
+        
+        let realm = try! Realm()
+        
+        let notes = realm.objects(R_Note.self)
+        
+        print(notes.count)
+        
+        try! realm.write {
+            realm.add(newnote)
+        }
+        
+        print(notes.count)
+        
+        /*
         
         let managedContext = CoreDataManager.shared.getContext()
         
@@ -52,9 +68,8 @@ class NewNoteViewController : UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-        
-        
         //self.dismiss(animated: false, completion: nil)
+ */
         self.tabBarController?.selectedIndex = 0
     }
 }

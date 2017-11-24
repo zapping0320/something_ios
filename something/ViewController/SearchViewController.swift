@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 import CoreData
+import RealmSwift
 
 class SearchViewController : UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     @IBOutlet weak var tableview: UITableView!
     
-    fileprivate var searchednotesarray:[NoteItem] = [NoteItem]()
+    fileprivate var searchednotesarray:[R_Note] = [R_Note]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,28 @@ class SearchViewController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func loadSearchedNotes() {
-        searchednotesarray = [NoteItem]()
+        searchednotesarray = [R_Note]()
         
+        let realm = try! Realm()
+        let results = realm.objects(R_Note.self)
+        print(results.count)
+        for i in 0..<results.count {
+            let item = results[i]
+            searchednotesarray.append(item)
+        }
+        
+        /*
+        DispatchQueue(label: "background").async {
+            autoreleasepool {
+                let realm = try! Realm()
+                let theDog = realm.objects(Dog.self).filter("age == 1").first
+                try! realm.write {
+                    theDog!.age = 3
+                }
+            }
+        }*/
+        
+        /*
         let fetchRequest: NSFetchRequest<Note> = Note.fetchRequest()
         do {
             // 결과값 담기
@@ -46,7 +67,8 @@ class SearchViewController : UIViewController, UITableViewDelegate, UITableViewD
             }
         } catch {
             print("Error with request: \(error)")
-        }
+        }*/
+        
         
         self.tableview.reloadData()
     }
