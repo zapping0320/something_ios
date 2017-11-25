@@ -9,13 +9,14 @@
 import Foundation
 import UIKit
 import CoreData
+import RealmSwift
 
 class NotebookViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var btn_search: UITextField!
     @IBOutlet weak var tableview: UITableView!
     
-    fileprivate var notebookarray:[NotebookItem] = [NotebookItem]()
+    fileprivate var notebookarray:[Int:[R_Notebook]] = [Int:[R_Notebook]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,22 +32,21 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
     }
     
     func loadNotebooks() {
-        notebookarray = [NotebookItem]()
-        let fetchRequest: NSFetchRequest<Notebook> = Notebook.fetchRequest()
-        do {
-            // 결과값 담기
-            let searchResults = try CoreDataManager.shared.getContext().fetch(fetchRequest)
-            // for 문을 이용하여 Key 값에 대한 Value 값 가져오기
-            for notebook in searchResults as [NSManagedObject] {
-                let value = String(describing: notebook.value(forKey: "name"))
-                print("\(value)")
-                let newitem = NotebookItem()
-                newitem.notebookname = notebook.value(forKey: "name") as! String
-                notebookarray.append(newitem)
-            }
-        } catch {
-            print("Error with request: \(error)")
+        notebookarray = [Int:[R_Notebook]]()
+        
+        let notebookarrya_recent = [R_Notebook]()
+        var notebookarray_all = [R_Notebook]()
+        
+        let realm = try! Realm()
+        let results = realm.objects(R_Notebook.self)
+        print(results.count)
+        for i in 0..<results.count {
+            let item = results[i]
+            notebookarray_all.append(item)
         }
+        
+        notebookarray[0] = notebookarrya_recent
+        notebookarray[1] = notebookarray_all
         
         self.tableview.reloadData()
     }
@@ -58,7 +58,12 @@ extension NotebookViewController {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notebookarray.count;
+        if (section > 1 || section < 0){
+        return 0
+        }else{
+            let datalist = notebookarray[section] as [R_Notebook]!
+            return datalist!.count
+        }
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -79,10 +84,10 @@ extension NotebookViewController {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
         let cell:NotebookTableViewCell = self.tableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell
-        let currentitem = notebookarray[indexPath.row]
+        let currentitem = notebookarray[indexPath.section]![indexPath.row] as R_Notebook
         //print(indexPath.row)
         //print(currentitem.notebookname)
-        cell.label_ol_name?.text = currentitem.notebookname
+        cell.label_ol_name?.text = currentitem.name
         
         return cell
     }

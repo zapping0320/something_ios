@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+import RealmSwift
 
 class AddNotebookViewController : UIViewController {
     
@@ -33,25 +34,18 @@ class AddNotebookViewController : UIViewController {
         
         //todo check duplicated
         
-        //add new notebook
+        let newnotebook = R_Notebook()
+        newnotebook.name = self.tf_name_outlet.text!
+       
         
-        let managedContext = CoreDataManager.shared.getContext()
-        // 2
-        let entity = NSEntityDescription.entity(forEntityName: "Notebook",
-                                       in: managedContext)!
+        let realm = try! Realm()
         
-        let notebook = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
+        //let notes = realm.objects(R_Note.self)
         
-        // 3
-        notebook.setValue(tf_name_outlet.text, forKeyPath: "name")
-        notebook.setValue(Date(), forKeyPath: "created_at")
+        //print(notes.count)
         
-        // 4
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+        try! realm.write {
+            realm.add(newnotebook)
         }
         
         self.dismiss(animated: false, completion: nil)

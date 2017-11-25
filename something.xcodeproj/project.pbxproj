@@ -32,6 +32,7 @@
 		0B7A77C11FADE999005A9509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A77BF1FADE999005A9509 /* LaunchScreen.storyboard */; };
 		0B7A77CC1FADE999005A9509 /* somethingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A77CB1FADE999005A9509 /* somethingTests.swift */; };
 		0B7A77D71FADE999005A9509 /* somethingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A77D61FADE999005A9509 /* somethingUITests.swift */; };
+		0BCA00DA1FC99D1300EFF6C0 /* ream_notebookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA00D91FC99D1300EFF6C0 /* ream_notebookModel.swift */; };
 		A7828AC23BB8188412DDBB62 /* Pods_something.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D27589B91F07CAD9654D6AA /* Pods_something.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		0B7A77D21FADE999005A9509 /* somethingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = somethingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7A77D61FADE999005A9509 /* somethingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = somethingUITests.swift; sourceTree = "<group>"; };
 		0B7A77D81FADE999005A9509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BCA00D91FC99D1300EFF6C0 /* ream_notebookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ream_notebookModel.swift; sourceTree = "<group>"; };
 		6FEF910C119D1CFAF60C566E /* Pods-something.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-something.release.xcconfig"; path = "../Pods/Target Support Files/Pods-something/Pods-something.release.xcconfig"; sourceTree = "<group>"; };
 		7D27589B91F07CAD9654D6AA /* Pods_something.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_something.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B8D901270AF93BA0A0A178 /* Pods-something.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-something.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-something/Pods-something.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				0B6958B01FB334310022D410 /* NotebookContext.swift */,
 				0B6958B41FB5EE190022D410 /* CoreDataManager.swift */,
 				0B3F49151FC7091E00D3FA37 /* realm_noteModel.swift */,
+				0BCA00D91FC99D1300EFF6C0 /* ream_notebookModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */,
 				0B7746551FAF423600F0E884 /* NoteViewController.swift in Sources */,
 				0B7746511FAF41E400F0E884 /* NotebookViewController.swift in Sources */,
+				0BCA00DA1FC99D1300EFF6C0 /* ream_notebookModel.swift in Sources */,
 				0B6958B31FB337CF0022D410 /* AddNotebookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
