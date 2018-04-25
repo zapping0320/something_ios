@@ -42,7 +42,7 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
         for i in 0..<results.count {
             let item = results[i]
             notebookarray_all.append(item)
-            if(i >= results.count - 5)//pick last modified data 5
+            if(i >= results.count - 5)//pick last modified data 5 dd
             {
                notebookarray_recent.append(item)
             }
