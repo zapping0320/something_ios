@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B3F490B1FBDCD8900D3FA37 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F49091FBDCD8900D3FA37 /* NoteTableViewCell.swift */; };
-		0B3F490C1FBDCD8900D3FA37 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3F490A1FBDCD8900D3FA37 /* NoteTableViewCell.xib */; };
 		0B3F490F1FBDCDF900D3FA37 /* NotebookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F490D1FBDCDF900D3FA37 /* NotebookTableViewCell.swift */; };
-		0B3F49101FBDCDF900D3FA37 /* NotebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3F490E1FBDCDF900D3FA37 /* NotebookTableViewCell.xib */; };
 		0B3F49121FBF109B00D3FA37 /* NotebookContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F49111FBF109B00D3FA37 /* NotebookContentViewController.swift */; };
 		0B3F49141FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F49131FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift */; };
 		0B3F49161FC7091E00D3FA37 /* realm_noteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3F49151FC7091E00D3FA37 /* realm_noteModel.swift */; };
@@ -54,10 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B3F49091FBDCD8900D3FA37 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
-		0B3F490A1FBDCD8900D3FA37 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		0B3F490D1FBDCDF900D3FA37 /* NotebookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookTableViewCell.swift; sourceTree = "<group>"; };
-		0B3F490E1FBDCDF900D3FA37 /* NotebookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookTableViewCell.xib; sourceTree = "<group>"; };
 		0B3F49111FBF109B00D3FA37 /* NotebookContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookContentViewController.swift; sourceTree = "<group>"; };
 		0B3F49131FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedNoteTableViewCell.swift; sourceTree = "<group>"; };
 		0B3F49151FC7091E00D3FA37 /* realm_noteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realm_noteModel.swift; sourceTree = "<group>"; };
@@ -133,10 +127,7 @@
 		0B77464D1FAF35D000F0E884 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0B3F49091FBDCD8900D3FA37 /* NoteTableViewCell.swift */,
-				0B3F490A1FBDCD8900D3FA37 /* NoteTableViewCell.xib */,
 				0B3F490D1FBDCDF900D3FA37 /* NotebookTableViewCell.swift */,
-				0B3F490E1FBDCDF900D3FA37 /* NotebookTableViewCell.xib */,
 				0B3F49131FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift */,
 			);
 			path = View;
@@ -368,8 +359,6 @@
 				0B7A77C11FADE999005A9509 /* LaunchScreen.storyboard in Resources */,
 				0B7A77BE1FADE998005A9509 /* Assets.xcassets in Resources */,
 				0B7A77BC1FADE997005A9509 /* Main.storyboard in Resources */,
-				0B3F49101FBDCDF900D3FA37 /* NotebookTableViewCell.xib in Resources */,
-				0B3F490C1FBDCD8900D3FA37 /* NoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +450,6 @@
 				0B7746611FB1DF7B00F0E884 /* Notebooks.xcdatamodeld in Sources */,
 				0B3F490F1FBDCDF900D3FA37 /* NotebookTableViewCell.swift in Sources */,
 				0B7746571FAF424600F0E884 /* FavoriteViewController.swift in Sources */,
-				0B3F490B1FBDCD8900D3FA37 /* NoteTableViewCell.swift in Sources */,
 				0B6958B11FB334310022D410 /* NotebookContext.swift in Sources */,
 				0B3F49141FC31BB000D3FA37 /* SearchedNoteTableViewCell.swift in Sources */,
 				0B6958AC1FB1EDA30022D410 /* Notebook+CoreDataClass.swift in Sources */,

@@ -20,21 +20,20 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        self.tableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook cell")
+        self.tableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook body")
         self.tableview.delegate = self
         self.tableview.dataSource = self
         loadNotebooks()
     }
     
     override func  viewDidAppear(_ animated: Bool) {
-        //loadNotebooks()
+        loadNotebooks()
     }
     
     func loadNotebooks() {
         notebookarray = [Int:[R_Notebook]]()
         
-        let notebookarrya_recent = [R_Notebook]()
+        var notebookarray_recent = [R_Notebook]()
         var notebookarray_all = [R_Notebook]()
         
         let realm = try! Realm()
@@ -43,9 +42,13 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
         for i in 0..<results.count {
             let item = results[i]
             notebookarray_all.append(item)
+            if(i >= results.count - 5)//pick last modified data 5
+            {
+               notebookarray_recent.append(item)
+            }
         }
         
-        notebookarray[0] = notebookarrya_recent
+        notebookarray[0] = notebookarray_recent
         notebookarray[1] = notebookarray_all
         
         self.tableview.reloadData()
@@ -74,7 +77,7 @@ extension NotebookViewController {
         print(indexPath.row)
         
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "NotebookContent View") as! NotebookContentViewController
-        //let itemlist = self.deviceinfolist_all[indexPath.section]
+        //let itemlist = self.notebookarray[indexPath.section]
         //viewController.selecteditem = itemlist![indexPath.row]
         viewController.selectedindex = indexPath.row
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -85,8 +88,8 @@ extension NotebookViewController {
         
         let cell:NotebookTableViewCell = self.tableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell
         let currentitem = notebookarray[indexPath.section]![indexPath.row] as R_Notebook
-        //print(indexPath.row)
-        //print(currentitem.notebookname)
+        print(indexPath.row)
+        print(currentitem.name)
         cell.label_ol_name?.text = currentitem.name
         
         return cell

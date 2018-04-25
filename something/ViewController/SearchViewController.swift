@@ -20,7 +20,7 @@ class SearchViewController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableview.register(NotebookTableViewCell.self, forCellReuseIdentifier: "notebook cell")
+        //self.tableview.register(SearchedNoteTableViewCell.self, forCellReuseIdentifier: "notebook cell")
         self.tableview.delegate = self
         self.tableview.dataSource = self
         
