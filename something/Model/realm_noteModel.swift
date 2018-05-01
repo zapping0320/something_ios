@@ -15,6 +15,6 @@ class R_Note: Object  {
     dynamic var isfavorite = false
     dynamic var title = ""
     dynamic var updated_at = Date()
-    //dynamic var relationship: Notebook?
+    dynamic var relatedNotebook: R_Notebook?
     
 }

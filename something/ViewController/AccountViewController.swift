@@ -8,7 +8,12 @@
 
 import Foundation
 import UIKit
+import RealmSwift
+
 
 class AccountViewController : UIViewController {
-    
+    override func  viewDidAppear(_ animated: Bool) {
+       print(Realm.Configuration.defaultConfiguration.fileURL!)//only for simulator
+        
+    }
 }

@@ -27,6 +27,7 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
     }
     
     override func  viewDidAppear(_ animated: Bool) {
+        print(Realm.Configuration.defaultConfiguration.fileURL!)//only for simulator
         loadNotebooks()
     }
     

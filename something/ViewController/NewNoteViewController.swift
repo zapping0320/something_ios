@@ -30,11 +30,15 @@ class NewNoteViewController : UIViewController {
             return
         }
         
+        let realm = try! Realm()
+        let notebooks = realm.objects(R_Notebook.self)
+        
+        let relatednotebook = notebooks[1]//temp
+        
         let newnote = R_Note()
         newnote.title = self.tf_ol_title.text!
         newnote.content = self.tv_ol_content.text!
-        
-        let realm = try! Realm()
+        newnote.relatedNotebook = relatednotebook
         
         let notes = realm.objects(R_Note.self)
         
