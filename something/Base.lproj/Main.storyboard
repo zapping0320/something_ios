@@ -314,6 +314,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="sb_searchBar" destination="E18-Mg-AnB" id="L4A-EP-ajZ"/>
                         <outlet property="searchDisplayController" destination="W69-kX-q20" id="ymn-VD-64x"/>
                         <outlet property="tableview" destination="LmO-fO-Gn8" id="FUL-sG-EGe"/>
                     </connections>
