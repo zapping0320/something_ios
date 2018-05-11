@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gj4-iv-x3R">
-                                <rect key="frame" x="15" y="20" width="345" height="50"/>
+                                <rect key="frame" x="15" y="64" width="345" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EHU-t7-XdF"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRc-UY-PFm" userLabel="Button_addnotebook">
-                                <rect key="frame" x="10" y="70" width="355" height="30"/>
+                                <rect key="frame" x="10" y="114" width="355" height="30"/>
                                 <color key="backgroundColor" red="0.38654898030000001" green="0.75559884430000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jQB-Am-IQO"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="5" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGq-5A-nNd">
-                                <rect key="frame" x="0.0" y="105" width="375" height="513"/>
+                                <rect key="frame" x="0.0" y="149" width="375" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notebook header" id="ku0-Zw-KAa">
@@ -104,7 +104,7 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="gGq-5A-nNd" secondAttribute="bottom" id="nQi-vt-Bdw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notebook" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="8Bd-v9-qJ7"/>
                     <connections>
                         <outlet property="btn_search" destination="gj4-iv-x3R" id="RJC-Ef-lZ8"/>
                         <outlet property="tableview" destination="gGq-5A-nNd" id="xTn-g2-QQg"/>
@@ -112,12 +112,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840.79999999999995" y="-1175.2623688155923"/>
+            <point key="canvasLocation" x="1456.8" y="-2204.3478260869565"/>
         </scene>
         <!--NotebookContent View Controller-->
         <scene sceneID="UFR-2v-8TX">
             <objects>
-                <viewController storyboardIdentifier="NotebookContent View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tvf-ma-uCe" userLabel="NotebookContent View Controller" customClass="NotebookContentViewController" customModule="something" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotebookContent View" id="Tvf-ma-uCe" userLabel="NotebookContent View Controller" customClass="NotebookContentViewController" customModule="something" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JOK-8k-U9k"/>
                         <viewControllerLayoutGuide type="bottom" id="70N-AE-IIs"/>
@@ -126,26 +126,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3b-wl-XAd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b3G-dH-ON0">
-                                <rect key="frame" x="0.0" y="76" width="375" height="571"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bWC-Hp-zEU">
+                                <rect key="frame" x="0.0" y="73" width="375" height="606"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.42268639460000001" green="0.74532666260000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="tableview" destination="b3G-dH-ON0" id="SDR-mU-pIx"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IxE-Dj-00O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-1021.4392803598201"/>
+            <point key="canvasLocation" x="2220" y="-1658.3208395802101"/>
         </scene>
         <!--AddNotebook View Controller-->
         <scene sceneID="ByZ-Lb-TYw">
@@ -160,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHh-Fx-cuQ">
-                                <rect key="frame" x="279" y="30" width="80" height="80"/>
+                                <rect key="frame" x="279" y="74" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.54021114029999995" green="1" blue="0.64958068410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="pK0-7p-zA6"/>
@@ -174,7 +167,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert New Notebook Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bro-jr-4IN" userLabel="Label_guide">
-                                <rect key="frame" x="10" y="120" width="355" height="30"/>
+                                <rect key="frame" x="10" y="164" width="355" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="egT-4S-LAc"/>
                                 </constraints>
@@ -183,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfy-Mq-k1v" userLabel="Name Text Field">
-                                <rect key="frame" x="10" y="170" width="355" height="30"/>
+                                <rect key="frame" x="10" y="214" width="355" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -207,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmO-ia-WUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517.5999999999999" y="-1709.5952023988007"/>
+            <point key="canvasLocation" x="2600.8000000000002" y="-2369.8650674662672"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="Tg9-7X-PPV">
@@ -246,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1N-OD-6sC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2433" y="-776"/>
+            <point key="canvasLocation" x="2772" y="-776.76161919040487"/>
         </scene>
         <!--Search-->
         <scene sceneID="wg7-f3-ORb">
@@ -343,7 +336,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="lWI-Md-aP1" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="Yaa-MO-poD" kind="relationship" relationship="viewControllers" id="j7i-mP-vbM"/>
                         <segue destination="Mc4-KM-8Ch" kind="relationship" relationship="viewControllers" id="iC7-Db-12q"/>
@@ -461,6 +454,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPM-cg-4Yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1490" y="340"/>
+        </scene>
+        <!--Notebook-->
+        <scene sceneID="QHn-SX-O2e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lWI-Md-aP1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notebook" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="roO-Tu-2Ay">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SgE-Pd-mSY" kind="relationship" relationship="rootViewController" id="gNA-ZO-542"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJS-92-lDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840" y="-1175.7121439280361"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yag-cg-1wL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SgE-Pd-mSY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OAu-Az-yGk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5c5-Ox-JcL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="80f-l3-aH5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYz-58-cCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="-2162"/>
         </scene>
     </scenes>
     <resources>

@@ -82,6 +82,7 @@ extension NotebookViewController {
         //viewController.selecteditem = itemlist![indexPath.row]
         viewController.selectedindex = indexPath.row
         self.navigationController?.pushViewController(viewController, animated: true)
+        //present(viewController, animated: true)
  
     }
     
