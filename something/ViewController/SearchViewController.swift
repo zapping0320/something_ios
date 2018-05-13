@@ -48,10 +48,6 @@ class SearchViewController : UIViewController, UITableViewDelegate, UITableViewD
                 searchednotesarray.append(item)
             }
         }
-        
-       
-        
-        
         self.tableview.reloadData()
     }
     
