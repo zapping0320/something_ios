@@ -85,6 +85,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label_ol_name" destination="B6X-qN-WjC" id="fjQ-fm-CFH"/>
+                                            <segue destination="Tvf-ma-uCe" kind="presentation" id="jcQ-XD-XQI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -104,7 +105,9 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="gGq-5A-nNd" secondAttribute="bottom" id="nQi-vt-Bdw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8Bd-v9-qJ7"/>
+                    <navigationItem key="navigationItem" title="notebook" id="8Bd-v9-qJ7">
+                        <barButtonItem key="backBarButtonItem" title="뒤로22" id="jTf-7N-hDX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btn_search" destination="gj4-iv-x3R" id="RJC-Ef-lZ8"/>
                         <outlet property="tableview" destination="gGq-5A-nNd" id="xTn-g2-QQg"/>
@@ -117,7 +120,7 @@
         <!--NotebookContent View Controller-->
         <scene sceneID="UFR-2v-8TX">
             <objects>
-                <viewController storyboardIdentifier="NotebookContent View" id="Tvf-ma-uCe" userLabel="NotebookContent View Controller" customClass="NotebookContentViewController" customModule="something" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotebookContent View" title="NoteBook Content" id="Tvf-ma-uCe" userLabel="NotebookContent View Controller" customClass="NotebookContentViewController" customModule="something" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JOK-8k-U9k"/>
                         <viewControllerLayoutGuide type="bottom" id="70N-AE-IIs"/>
@@ -140,7 +143,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkN-fO-yR1">
-                                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -170,9 +173,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14b-rt-XcU">
+                                <rect key="frame" x="16" y="28" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="btn_closeNotebookContent:" destination="Tvf-ma-uCe" eventType="touchUpInside" id="mYU-eu-yxx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="NoteBook" id="dJU-8z-7gw">
+                        <barButtonItem key="backBarButtonItem" title="뒤로가기" id="j8e-U2-IJe"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="bWC-Hp-zEU" id="56a-mg-neK"/>
                     </connections>

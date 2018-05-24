@@ -10,7 +10,10 @@ import UIKit
 import RealmSwift
 
 class NotebookContentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    @IBAction func btn_closeNotebookContent(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var tableview: UITableView!
     
     fileprivate var selectedNotebookContents:[R_Note] = [R_Note]()
@@ -24,23 +27,39 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
         
         loadSelectedContents()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 
     func loadSelectedContents() {
         selectedNotebookContents = [R_Note]()
         
         let realm = try! Realm()
-        let results = realm.objects(R_Note.self)
-        print(results.count)
-        for i in 0..<results.count {
-            let item = results[i]
-            /*
-            if(item.content.contains(keyword)
-                || item.title.contains(keyword)
-                || keyword == "")
+        let notebooks = realm.objects(R_Notebook.self)
+        print(self.selectedindex)
+        /*
+        vr selected:R_Notebook = nil
+        for j in 0..<notebooks.count {
+            print(notebooks[j].name)
+            if(j == self.selectedindex)
             {
-                searchednotesarray.append(item)
-            }*/
+                selected = notebooks[j]
+            }
+        }*/
+        let selectedNotebook = notebooks[self.selectedindex]
+        let notes = realm.objects(R_Note.self)
+        print(notes.count)
+        for i in 0..<notes.count {
+            let item = notes[i]
+            
             selectedNotebookContents.append(item)
+            /*
+            if(item.relatedNotebook == selectedNotebook)
+            {
+                selectedNotebookContents.append(item)
+            }*/
+            
         }
         self.tableview.reloadData()
     }

@@ -81,8 +81,8 @@ extension NotebookViewController {
         //let itemlist = self.notebookarray[indexPath.section]
         //viewController.selecteditem = itemlist![indexPath.row]
         viewController.selectedindex = indexPath.row
-        self.navigationController?.pushViewController(viewController, animated: true)
-        //present(viewController, animated: true)
+       // self.navigationController?.pushViewController(viewController, animated: true)
+        //self.present(viewController, animated: true)
  
     }
     
