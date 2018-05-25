@@ -38,27 +38,17 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
         let realm = try! Realm()
         let notebooks = realm.objects(R_Notebook.self)
         print(self.selectedindex)
-        /*
-        vr selected:R_Notebook = nil
-        for j in 0..<notebooks.count {
-            print(notebooks[j].name)
-            if(j == self.selectedindex)
-            {
-                selected = notebooks[j]
-            }
-        }*/
+        
         let selectedNotebook = notebooks[self.selectedindex]
         let notes = realm.objects(R_Note.self)
         print(notes.count)
         for i in 0..<notes.count {
             let item = notes[i]
             
-            selectedNotebookContents.append(item)
-            /*
-            if(item.relatedNotebook == selectedNotebook)
+            if(item.relatedNotebook!.isSameObject(as: selectedNotebook))
             {
                 selectedNotebookContents.append(item)
-            }*/
+            }
             
         }
         self.tableview.reloadData()

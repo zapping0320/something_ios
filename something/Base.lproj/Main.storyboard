@@ -85,7 +85,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label_ol_name" destination="B6X-qN-WjC" id="fjQ-fm-CFH"/>
-                                            <segue destination="Tvf-ma-uCe" kind="presentation" id="jcQ-XD-XQI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
