@@ -85,8 +85,8 @@ extension NotebookViewController {
         
         let cell:NotebookTableViewCell = self.tableview.dequeueReusableCell(withIdentifier: "notebook cell", for: indexPath) as! NotebookTableViewCell
         let currentitem = notebookarray[indexPath.section]![indexPath.row] as R_Notebook
-        print(indexPath.row)
-        print(currentitem.name)
+        //print(indexPath.row)
+        //print(currentitem.name)
         cell.label_ol_name?.text = currentitem.name
         
         return cell

@@ -29,7 +29,7 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
+       // self.navigationController?.isNavigationBarHidden = false
     }
 
     func loadSelectedContents() {
@@ -37,19 +37,14 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
         
         let realm = try! Realm()
         let notebooks = realm.objects(R_Notebook.self)
-        print(self.selectedindex)
-        
         let selectedNotebook = notebooks[self.selectedindex]
         let notes = realm.objects(R_Note.self)
-        print(notes.count)
         for i in 0..<notes.count {
             let item = notes[i]
-            
             if(item.relatedNotebook!.isSameObject(as: selectedNotebook))
             {
                 selectedNotebookContents.append(item)
             }
-            
         }
         self.tableview.reloadData()
     }
@@ -73,7 +68,11 @@ extension NotebookContentViewController {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Note View") as! NoteViewController
+        viewController.selectedNotebookindex = self.selectedindex
+        viewController.selectedNoteindex = indexPath.row
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
         
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -81,7 +80,7 @@ extension NotebookContentViewController {
         let cell:NoteContentCell = self.tableview.dequeueReusableCell(withIdentifier: "NoteContentCell", for: indexPath) as! NoteContentCell
         
         let currentitem = selectedNotebookContents[indexPath.row]
-        print(indexPath.row)
+        //print(indexPath.row)
         //print(currentitem.name)
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy-MM-dd"
