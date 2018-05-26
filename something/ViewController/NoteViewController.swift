@@ -12,6 +12,7 @@ import RealmSwift
 
 class NoteViewController : UIViewController {
     
+    @IBOutlet weak var label_updated_at: UILabel!
     @IBOutlet weak var tf_ol_title: UITextField!
     @IBOutlet weak var tv_ol_content: UITextView!
     
@@ -38,6 +39,9 @@ class NoteViewController : UIViewController {
         }
         selectedNote = targetNotes[self.selectedNoteindex]
         
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        self.label_updated_at.text = dateformatter.string(from: selectedNote.updated_at)
         self.tf_ol_title.text = selectedNote.title
         self.tv_ol_content.text = selectedNote.content
  
