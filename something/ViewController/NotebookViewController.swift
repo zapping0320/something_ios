@@ -76,7 +76,8 @@ extension NotebookViewController {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "NotebookContent View") as! NotebookContentViewController
-        viewController.selectedindex = indexPath.row
+        let currentNoteBook = notebookarray[indexPath.section]![indexPath.row] as R_Notebook
+        viewController.selectedNotebook = currentNoteBook
         self.navigationController?.pushViewController(viewController, animated: true)
         //self.present(viewController, animated: true)
     }

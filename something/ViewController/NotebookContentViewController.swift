@@ -17,7 +17,7 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var tableview: UITableView!
     
     fileprivate var selectedNotebookContents:[R_Note] = [R_Note]()
-    open var selectedindex:Int = 0
+    open var selectedNotebook:R_Notebook = R_Notebook()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +36,6 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
         selectedNotebookContents = [R_Note]()
         
         let realm = try! Realm()
-        let notebooks = realm.objects(R_Notebook.self)
-        let selectedNotebook = notebooks[self.selectedindex]
         let notes = realm.objects(R_Note.self).sorted(byKeyPath: "updated_at", ascending: false)
         for i in 0..<notes.count {
             let item = notes[i]
@@ -70,10 +68,10 @@ extension NotebookContentViewController {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Note View") as! NoteViewController
-        viewController.selectedNotebookindex = self.selectedindex
-        viewController.selectedNoteindex = indexPath.row
-        //self.navigationController?.pushViewController(viewController, animated: true)
+        viewController.selectedNotebook = self.selectedNotebook
+        viewController.selectedNote = selectedNotebookContents[indexPath.row]
         self.present(viewController, animated: true)
+        loadSelectedContents()
     }
         
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
