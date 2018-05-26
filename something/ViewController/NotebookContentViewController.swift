@@ -38,7 +38,7 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
         let realm = try! Realm()
         let notebooks = realm.objects(R_Notebook.self)
         let selectedNotebook = notebooks[self.selectedindex]
-        let notes = realm.objects(R_Note.self)
+        let notes = realm.objects(R_Note.self).sorted(byKeyPath: "updated_at", ascending: false)
         for i in 0..<notes.count {
             let item = notes[i]
             if(item.relatedNotebook!.isSameObject(as: selectedNotebook))
@@ -72,7 +72,8 @@ extension NotebookContentViewController {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Note View") as! NoteViewController
         viewController.selectedNotebookindex = self.selectedindex
         viewController.selectedNoteindex = indexPath.row
-        self.navigationController?.pushViewController(viewController, animated: true)
+        //self.navigationController?.pushViewController(viewController, animated: true)
+        self.present(viewController, animated: true)
     }
         
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -84,7 +85,7 @@ extension NotebookContentViewController {
         //print(currentitem.name)
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy-MM-dd"
-        cell.label_datetime?.text = dateformatter.string(from: currentitem.created_at)
+        cell.label_datetime?.text = dateformatter.string(from: currentitem.updated_at)
         cell.label_title?.text = currentitem.title
         cell.label_content?.text = currentitem.content
         

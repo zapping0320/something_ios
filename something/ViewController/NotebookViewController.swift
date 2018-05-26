@@ -38,14 +38,14 @@ class NotebookViewController : UIViewController, UITableViewDelegate, UITableVie
         var notebookarray_all = [R_Notebook]()
         
         let realm = try! Realm()
-        let results = realm.objects(R_Notebook.self)
+        let results = realm.objects(R_Notebook.self).sorted(byKeyPath: "name", ascending: true)
         print(results.count)
         for i in 0..<results.count {
             let item = results[i]
             notebookarray_all.append(item)
             if(i >= results.count - 5)//pick last modified data 5 dd
             {
-               notebookarray_recent.append(item)
+               notebookarray_recent.insert(item, at: 0)
             }
         }
         

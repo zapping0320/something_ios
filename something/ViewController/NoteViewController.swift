@@ -15,6 +15,8 @@ class NoteViewController : UIViewController {
     @IBOutlet weak var tf_ol_title: UITextField!
     @IBOutlet weak var tv_ol_content: UITextView!
     
+    @IBOutlet weak var switch_favorite: UISwitch!
+   
     open var selectedNotebookindex:Int = 0
     open var selectedNoteindex:Int = 0
     fileprivate var selectedNote:R_Note = R_Note()
@@ -39,5 +41,9 @@ class NoteViewController : UIViewController {
         self.tf_ol_title.text = selectedNote.title
         self.tv_ol_content.text = selectedNote.content
  
+    }
+    
+    @IBAction func btn_SaveNote(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
