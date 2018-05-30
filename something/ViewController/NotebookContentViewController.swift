@@ -30,6 +30,7 @@ class NotebookContentViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidAppear(_ animated: Bool) {
        // self.navigationController?.isNavigationBarHidden = false
+        loadSelectedContents()
     }
 
     func loadSelectedContents() {
@@ -71,7 +72,6 @@ extension NotebookContentViewController {
         viewController.selectedNotebook = self.selectedNotebook
         viewController.selectedNote = selectedNotebookContents[indexPath.row]
         self.present(viewController, animated: true)
-        loadSelectedContents()
     }
         
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
