@@ -89,4 +89,22 @@ extension NotebookContentViewController {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(selectedNotebookContents[indexPath.row])
+                /*
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                tableView.endUpdates()*/
+            }
+            loadSelectedContents()
+        }
+    }
 }
